@@ -163,7 +163,7 @@ export class EventFacade extends BaseFacade {
             this.handleError()
         );
     }
-    
+
     /**
     * Recherche des suggestions d'adresses.
     * 

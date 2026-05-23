@@ -7,8 +7,8 @@ import { UserFacade } from '../../core/facades/user/user.facade';
 import { User } from '../../core/models/user.model';
 
 // Feature components
-import { EditProfilePictureComponent } from './components/edit-profile-picture.component';
-import { EditProfileFormComponent } from './components/edit-profile-form.component';
+import { EditProfilePictureComponent } from './components/edit-profile-picture/edit-profile-picture.component';
+import { EditProfileFormComponent } from './components/edit-profile-form/edit-profile-form.component';
 
 // Shared components
 import { StateHandlerComponent } from '../../shared-components/state-handler/state-handler.component';
@@ -38,8 +38,8 @@ import { StateHandlerComponent } from '../../shared-components/state-handler/sta
   templateUrl: './edit-profile.component.html',
   styleUrls: ['./edit-profile.component.scss']
 })
+
 export class EditProfileComponent implements OnInit {
-  
   private userFacade = inject(UserFacade);
 
   /** États exposés par la facade */

@@ -1,0 +1,93 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.event-address {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.time-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.field {
+  flex: 1;
+  min-width: 0;
+  margin-top: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 15px;
+  font-weight: var(--font-extrabold);
+}
+
+.input {
+  width: 100%;
+  min-height: 58px;
+  padding: 0 18px;
+  border: none;
+  border-bottom: 2px solid var(--color-black);
+  box-shadow: var(--shadow-input);
+  background: var(--color-white);
+  font-size: 16px;
+  font-weight: var(--font-bold);
+  outline: none;
+}
+
+.input:focus {
+  border-bottom: 2px solid var(--color-orange);
+  box-shadow: var(--shadow-input-focus);
+}
+
+.error {
+  font-size: 14px;
+  font-weight: var(--font-bold);
+  color: var(--color-error);
+}
+
+.date-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.date-wrapper .mat-datepicker-toggle {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+}
+
+input[type="time"] {
+  cursor: pointer !important;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  cursor: pointer !important;
+}
+
+
+@media (min-width: 1024px) {
+
+  .label {
+    font-size: 18px;
+  }
+
+  .input {
+    min-height: 72px;
+    padding: 0 24px;
+    font-size: 20px;
+  }
+
+  .error {
+    font-size: 16px;
+  }
+}

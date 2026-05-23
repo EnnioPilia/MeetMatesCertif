@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.participants-list {
+  width: 98%;
+  padding: 16px 0;
+}
+
+.participants-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.participant-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.participant-name {
+  font-weight: var(--font-medium);
+}
+
+.empty-state {
+  margin-top: 16px;
+  text-align: center;
+  color: var(--color-neutral);
+}
+
+button:hover {
+   color: var(--color-orange-dark);
+}
+
+
+@media (min-width: 1024px) {
+
+  .participants-content {
+    gap: 24px;
+  }
+
+  .participant-name {
+    font-size: 21px;
+  }
+}

@@ -8,11 +8,9 @@ import { EventFacade } from '../../core/facades/events/event/event.facade';
 import { EventFormMapper } from '../../core/mappers/event-form.mapper';
 import { EventFormValue } from '../../core/models/event-form.model';
 
-// Feature components
-import { EventFormComponent } from '../event-form/event-form.component';
-
 // Shared components
 import { StateHandlerComponent } from '../../shared-components/state-handler/state-handler.component';
+import { EventFormComponent } from '../../shared-components/event-form/event-form.component';
 
 /**
  * Page de création d’un nouvel événement.
@@ -41,8 +39,8 @@ import { StateHandlerComponent } from '../../shared-components/state-handler/sta
   templateUrl: './post-event.component.html',
   styleUrls: ['./post-event.component.scss']
 })
-export class PostEventPage {
 
+export class PostEventPage {
   private eventFacade = inject(EventFacade);
 
   /** États exposés par la facade */

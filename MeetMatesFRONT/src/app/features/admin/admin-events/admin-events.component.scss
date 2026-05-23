@@ -1,11 +1,160 @@
-.container {
-    @media (min-width: 1000px) and (max-width: 2900px) {
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-    }
+:host {
+  display: block;
+  width: 100%;
+}
 
-    @media (min-width: 500px) and (max-width: 999px) {
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-    }
+.admin-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+.admin-content {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.admin-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: var(--font-semibold);
+}
+
+.events-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-panel {
+  width: 100%;
+}
+
+.event-header-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.event-title {
+  font-weight: var(--font-semibold);
+}
+
+.event-date {
+  font-size: 14px;
+  color: var(--color-neutral);
+  padding-right: 8px;
+}
+
+.event-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 20px;
+}
+
+.event-info {
+  width: 100%;
+  max-width: 320px;
+}
+
+.participants-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.participants-title {
+  font-size: 18px;
+  font-weight: var(--font-semibold);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-black);
+}
+
+.participants-list {
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.empty-participants {
+  color: var(--color-neutral);
+}
+
+.event-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--color-neutral);
+}
+
+
+@media (min-width: 1024px) {
+
+  .admin-content {
+    max-width: 510px;
+    gap: 50px;
+  }
+
+  .admin-title {
+    font-size: 42px;
+  }
+
+  .events-accordion {
+    gap: 28px;
+  }
+
+  .event-body {
+    padding: 32px;
+    gap: 32px;
+  }
+
+  .event-info {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .participants-title,
+  .participants-list li,
+  .empty-participants {
+    font-size: 22px;
+  }
+
+  ::ng-deep .mat-expansion-panel-header {
+    height: 90px !important;
+  }
+
+  ::ng-deep .mat-content {
+    align-items: center;
+  }
+
+  .event-title,
+  .event-date {
+    font-size: 24px;
+  }
+
+  ::ng-deep button.primary-button {
+    width: 100% !important;
+    height: 80px !important;
+
+    font-size: 28px !important;
+  }
 }

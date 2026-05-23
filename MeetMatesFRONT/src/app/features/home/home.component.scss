@@ -1,11 +1,98 @@
-.container {
-    @media (min-width: 1000px) and (max-width: 2900px) {
-        width: 40vw;
-        margin: 0 auto;
-    }
+.home {
+  min-height: calc(100vh - 64px - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+}
 
-    @media (min-width: 600px) and (max-width: 999px) {
-        width: 70vw;
-        margin: 0 auto;
-    }
+.home-content {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-logo {
+  font-family: 'Poiret One', cursive;
+  font-size: clamp(42px, 10vw, 90px);
+  font-weight: var(--font-bold);
+  margin: 0;
+}
+
+.home-title {
+  display: none;
+}
+
+.home-description {
+  margin-top: 20px;
+  max-width: 680px;
+  font-size: clamp(16px, 2vw, 22px);
+  line-height: 1.7;
+}
+
+.home-actions {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+@media (min-width: 1024px) {
+
+  .home {
+    min-height: calc(100vh - 180px);
+    padding: 64px;
+  }
+
+  .home-logo {
+    display: none;
+  }
+
+  .home-title {
+    display: block;
+    margin:  auto;
+    font-size: 90px;
+    font-weight: var(--font-thin);
+  }
+
+  .home-actions {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1800px) {
+
+  .home {
+    min-height: calc(100vh - 180px);
+    padding: 20px;
+  }
+
+  .home-logo {
+    display: none;
+  }
+
+  .home-title {
+    display: block;
+    margin-top: 16px;
+    font-size: 100px;
+    font-weight: var(--font-thin);
+    margin: auto;
+  }
+
+  .home-description {
+    margin-top: 20px;
+    max-width: 680px;
+   font-size: 24px;
+    line-height: 1.7;
+  }
+
+  .home-actions {
+    max-width: 500px;
+  }
 }

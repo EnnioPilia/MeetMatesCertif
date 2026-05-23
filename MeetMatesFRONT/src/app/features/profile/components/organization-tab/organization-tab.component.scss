@@ -1,0 +1,134 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.organization-list {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.empty-state {
+  margin-top: 25px;
+  text-align: center;
+  color: var(--color-neutral);
+}
+
+.events-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.event-panel {
+  width: 100%;
+}
+
+.event-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-right: 12px;
+}
+
+.event-title {
+  font-size: 20px;
+  font-weight: var(--font-bold);
+}
+
+.event-date {
+  font-size: 20px;
+  font-weight: var(--font-bold);
+}
+
+.event-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.event-panel {
+  width: 100% !important;
+  border-bottom: 1px solid var(--color-black);
+  box-shadow: var(--shadow-card) !important;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+  margin-bottom: 10px;
+}
+
+.primary-button {
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-transparent);
+}
+
+
+@media (min-width: 1024px) {
+
+  .organization-list {
+    margin-top: 16px;
+  }
+
+  .event-title {
+    font-size: 25px;
+  }
+
+  .event-content {
+    gap: 15px;
+  }
+
+  .events-accordion {
+    gap: 10px;
+  }
+
+  .event-date {
+    margin-top: 7px;
+    font-size: 20px;
+    font-weight: var(--font-bold);
+  }
+
+  .empty-state {
+    margin-top: 35px;
+  }
+
+  ::ng-deep .mat-expansion-panel-header {
+    height: 65px !important;
+  }
+
+  ::ng-deep .mat-expansion-panel-body {
+    padding-bottom: 20px !important;
+  }
+
+  .primary-button {
+    font-size: 20px;
+    transition: color 0.2s ease;
+  }
+
+  .primary-button:hover {
+    color: var(--color-orange-dark);
+  }
+
+}
+
+@media (min-width: 1800px) {
+
+  .event-title {
+    font-size: 28px;
+  }
+
+  .events-accordion {
+    gap: 16px;
+  }
+
+  ::ng-deep .mat-expansion-panel-header {
+    height: 80px !important;
+  }
+
+  .primary-button {
+    font-size: 25px;
+    transition: color 0.2s ease;
+  }
+
+}

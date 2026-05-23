@@ -23,13 +23,15 @@ import { LegalService } from '../../core/services/legal.service/legal.service';
 @Component({
   selector: 'app-cgu-dialog',
   standalone: true,
-  templateUrl: './cgu-dialog.component.html',
-    imports: [
+  imports: [
     CommonModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
   ],
+  templateUrl: './cgu-dialog.component.html',
+  styleUrls: ['./cgu-dialog.component.scss'],
 })
+
 export class CguDialogComponent {
   safeContent!: SafeHtml;
 

@@ -1,0 +1,46 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.event-info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 5px;
+}
+
+.event-info-card p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+@media (min-width: 1024px) {
+
+  .event-info-card {
+    gap: 14px;
+    padding: 6px;
+  }
+
+ .event-info-card p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 1800px) {
+
+  .event-info-card {
+    gap: 14px;
+    padding: 6px;
+  }
+
+ .event-info-card p {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.7;
+  }
+}

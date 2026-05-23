@@ -1,15 +1,122 @@
-.container {
-    @media (min-width: 1000px) and (max-width: 2900px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+:host {
+  display: block;
+  width: 100%;
+}
 
-    @media (min-width: 500px) and (max-width: 999px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+.admin-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+.admin-content {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.admin-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: var(--font-semibold);
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.user-card {
+  background: var(--color-white);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 !important;
+  gap: 35px;
+  border-bottom: 2px solid var(--color-black);
+ box-shadow: var(--shadow-input);
+}
+
+.user-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: var(--font-semibold);
+}
+
+.user-email {
+  font-size: 14px;
+  color:var(--color-neutral);
+}
+
+.user-meta {
+  font-size: 14px;
+}
+
+.user-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--color-neutral);
+}
+
+
+@media (min-width: 1024px) {
+
+  .admin-content {
+    max-width: 510px;
+    gap: 50px;
+  }
+
+  .admin-title {
+    font-size: 42px;
+  }
+
+  .users-list {
+    gap: 36px;
+  }
+
+  .user-card {
+    padding: 32px;
+  }
+
+  .user-infos {
+    gap: 12px;
+  }
+
+  .user-name {
+    font-size: 28px;
+  }
+
+  .user-email,
+  .user-meta {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .user-actions {
+    width: 100%;
+    gap: 20px;
+  }
+
+  ::ng-deep button.secondary-button {
+    width: 100% !important;
+    height: 80px !important;
+    font-size: 28px !important;
+  }
 }

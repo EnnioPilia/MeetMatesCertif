@@ -14,10 +14,10 @@ import { DialogService } from '../../core/services/dialog.service/dialog.service
 import { ProfileFacade } from '../../core/facades/profile/profile.facade';
 
 // Feature components
-import { ProfileCardComponent } from './components/profile-card.component';
-import { ParticipationTabComponent } from './components/participation-tab.component';
-import { OrganizationTabComponent } from './components/organization-tab.component';
-import { SettingsMenuComponent } from './components/settings-menu.component';
+import { ProfileCardComponent } from './components/profile-card.component/profile-card.component';
+import { ParticipationTabComponent } from './components/participation-tab/participation-tab.component';
+import { OrganizationTabComponent } from './components/organization-tab/organization-tab.component';
+import { SettingsMenuComponent } from './components/settings-menu/settings-menu.component';
 
 // Shared components
 import { StateHandlerComponent } from '../../shared-components/state-handler/state-handler.component';
@@ -60,8 +60,8 @@ import { StateHandlerComponent } from '../../shared-components/state-handler/sta
   styleUrls: ['./profile.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProfileComponent {
 
+export class ProfileComponent {
   private router = inject(Router);
   private destroyRef = inject(DestroyRef);
   private profileFacade = inject(ProfileFacade);

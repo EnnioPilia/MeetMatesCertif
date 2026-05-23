@@ -1,0 +1,33 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.loading-spinner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+mat-progress-spinner {
+  --mdc-circular-progress-active-indicator-color: var(--color-orange);
+  margin-bottom: 5px;
+}
+
+.loading-message {
+  text-align: center;
+  font-size: 16px;
+  font-weight: var(--font-bold);
+  color: var(--color-neutral);
+}
+
+
+@media (min-width: 1024px) {
+
+  .loading-message {
+    font-size: 27px;
+  }
+}

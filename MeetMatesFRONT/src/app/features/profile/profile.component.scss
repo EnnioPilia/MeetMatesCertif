@@ -1,17 +1,75 @@
-.layout-container {
-    @media (min-width: 1000px) and (max-width: 2900px) {
-    position: relative;
-    width: 40vw;
-    margin: 0 auto;
-    padding-inline: 4rem;
-    padding-top: 6rem;
+:host {
+  display: block;
+  width: 100%;
+}
+
+.profile-page {
+  width: 100%;
+  min-height: calc(100dvh - var(--header-mobile) - var(--footer-mobile));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 24px 15px;
+  box-sizing: border-box;
+}
+
+.profile-layout {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.profile-tabs {
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+@media (min-width: 1024px) {
+
+  .profile-page {
+    padding-top: 35px;
+    min-height: calc(100dvh - var(--header-desktop));
   }
 
-  @media (min-width: 600px) and (max-width: 999px) {
-    position: relative;
-    width: 70vw;
-    margin: 0 auto;
-    padding-inline: 4rem;
-    padding-top: 9rem;
+  .profile-layout {
+    max-width: 510px;
   }
+
+  ::ng-deep .mdc-tab {
+    height: 60px !important;
+
+  }
+
+  ::ng-deep .mdc-tab__text-label {
+    font-size: 20px !important;
+    font-weight: var(--font-bold) !important;
+  }
+
+}
+
+@media (min-width: 1800px) {
+
+  .profile-layout {
+    max-width: 650px;
+    margin-top: 25px;
+  }
+
+  .profile-tabs {
+      margin-top: 20px;
+  }
+
+  ::ng-deep .mdc-tab {
+    height: 72px !important;
+    min-width: 220px !important;
+    padding-inline: 32px !important;
+  }
+
+  ::ng-deep .mdc-tab__text-label {
+    font-size: 22px !important;
+    font-weight: var(--font-bold) !important;
+  }
+
 }

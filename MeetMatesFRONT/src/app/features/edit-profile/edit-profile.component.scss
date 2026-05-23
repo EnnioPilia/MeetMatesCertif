@@ -1,9 +1,40 @@
-.container {
-    @media (min-width: 1000px) and (max-width: 2900px) {
-        margin: 0 auto;
-    }
+:host {
+  display: block;
+  width: 100%;
+}
 
-    @media (min-width: 600px) and (max-width: 999px) {
-        margin: 0 auto;
-    }
+.edit-profile-page {
+  width: 100%;
+  min-height: calc(100dvh - var(--header-mobile) - var(--footer-mobile));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.edit-profile-content {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+
+@media (min-width: 1024px) {
+
+  .edit-profile-page {
+    padding-inline: 48px;
+    min-height: calc(100dvh - var(--header-desktop));
+    padding-top: 70px;
+
+  }
+
+  .edit-profile-content {
+    max-width: 460px;
+    gap: 48px;
+  }
+
 }

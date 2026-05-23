@@ -22,16 +22,14 @@ import { AuthFacade } from '../../../core/facades/auth/auth.facade';
   standalone: true,
   imports: [MatCardModule],
   templateUrl: './verify.component.html',
+  styleUrls: ['./verify.component.scss'],
 })
+
 export class VerifyComponent implements OnInit {
-  
   private route = inject(ActivatedRoute);
   private authFacade = inject(AuthFacade);
 
-  /** Message affiché à l'utilisateur selon l'état du traitement. */
   message = 'Activation en cours...';
-
-  /** Indique si la vérification a réussi. */
   success = false;
 
   /**

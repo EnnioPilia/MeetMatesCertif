@@ -1,0 +1,65 @@
+:host {
+  width: 100%;
+}
+
+.event-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.description-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.description-label {
+  font-size: 15px;
+  font-weight: var(--font-extrabold);
+}
+
+.description-textarea {
+  width: 100%;
+  min-height: 58px;
+  padding: 18px 18px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 0;
+  background: var(--color-white);
+  border-bottom: 2px solid var(--color-black);
+  box-shadow: var(--shadow-input);
+  outline: none;
+}
+
+.description-textarea:focus {
+  border-bottom: 2px solid var(--color-orange);
+  box-shadow: var(--shadow-input-focus);
+}
+
+.description-error {
+  font-size: 14px;
+  font-weight: var(--font-bold);
+  color: var(--color-error);
+}
+
+
+@media (min-width: 1024px) {
+
+  .description-label {
+    font-size: 18px;
+  }
+
+  .description-textarea {
+    min-height: 110px;
+    padding: 24px;
+    font-size: 20px;
+  }
+
+  .description-error {
+    font-size: 16px;
+  }
+}

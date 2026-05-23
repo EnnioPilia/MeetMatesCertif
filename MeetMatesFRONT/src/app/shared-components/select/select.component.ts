@@ -27,8 +27,10 @@ import { MatSelectModule } from '@angular/material/select';
     MatFormFieldModule,
     MatSelectModule
   ],
-  templateUrl: './select.component.html'
+  templateUrl: './select.component.html',
+  styleUrls: ['./select.component.scss']
 })
+
 export class AppSelectComponent {
   @Input() label!: string;
   @Input() control!: FormControl;

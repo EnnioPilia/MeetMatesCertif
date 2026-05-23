@@ -18,11 +18,12 @@ import { EventResponse } from '../../core/models/event-response.model';
 import { EventListItem } from '../../core/models/event-list-item.model';
 
 // Feature components
-import { EventCardComponent } from '../../features/search-event/components/event-card-component';
+import { EventCardComponent } from './components/event-card/event-card.component';
 
 // Shared components
 import { LoadingSpinnerComponent } from '../../shared-components/loading-spinner/loading-spinner.component';
 import { AppInputComponent } from '../../shared-components/input/input.component';
+import { StateHandlerComponent } from '../../shared-components/state-handler/state-handler.component';
 
 /**
  * Composant parent chargé de la recherche d’événements.
@@ -54,13 +55,14 @@ import { AppInputComponent } from '../../shared-components/input/input.component
     EventCardComponent,
     MatExpansionModule,
     MatProgressSpinnerModule,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    StateHandlerComponent
   ],
   templateUrl: './search-events.component.html',
   styleUrls: ['./search-events.component.scss'],
 })
-export class SearchEventsComponent implements OnInit {
 
+export class SearchEventsComponent implements OnInit {
   private fb = inject(FormBuilder);
   private eventService = inject(EventService);
   private router = inject(Router);

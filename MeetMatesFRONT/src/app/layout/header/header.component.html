@@ -1,10 +1,47 @@
-<mat-toolbar class="header fixed top-0 left-0 right-0 flex items-center justify-between z-50">
-  
-  <app-back-button>
-  </app-back-button>
+<header class="header">
 
-  <span class="text-2xl flex-1 text-center pr-10">
-    {{ signals.pageTitle() }}
-  </span>
+  <div class="mobile-header">
 
-</mat-toolbar>
+    <div class="back-section">
+      <app-back-button />
+    </div>
+
+    <div class="page-title">
+      {{ signals.pageTitle() }}
+    </div>
+
+  </div>
+
+  <div class="desktop-header">
+
+    <div class="desktop-left">
+
+      <div class="logo" (click)="navigateTo('home')">
+        MEETMATES
+      </div>
+
+      <button class="publish-btn" (click)="navigateTo('post-event')">
+        + Déposer une annonce
+      </button>
+
+    </div>
+
+    <nav class="desktop-nav">
+
+      <button class="nav-btn" (click)="navigateTo('category')"> <mat-icon class="">grid_view</mat-icon>
+        Catégories
+      </button>
+
+      <button class="nav-btn" (click)="navigateTo('search-events')"> <mat-icon class="">search</mat-icon>
+        Rechercher
+      </button>
+
+      <button class="nav-btn" (click)="navigateTo('profile')"><mat-icon class="">person</mat-icon>
+        Profil
+      </button>
+
+    </nav>
+
+  </div>
+
+</header>

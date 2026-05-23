@@ -1,35 +1,46 @@
-<div class="container flex flex-col items-center justify-center min-h-screen px-6 py-10 text-center">
+<section class="home">
 
-  <h2 class="text-4xl">MEET MATES</h2>
+  <div class="home-content">
 
-  <p class="text card-text mt-7 mb-8 p-4">
-    Meet Mates est une application qui permet de participer à des activités en tout genre,
-    rencontrer de nouvelles personnes, partager des moments de convivialité.
-    Publiez vos propres annonces afin d’inviter la communauté à vous rejoindre et partager vos passions.
-  </p>
+    <h1 class="home-logo">
+      MEET MATES
+    </h1>
 
-  <div class="flex flex-col items-center justify-center text-2xl gap-3">
+    <h2 class="home-title">
+      {{ signals.pageTitle() }}
+    </h2>
 
-    <app-button 
-      label="C O N N E X I O N"
-      class="primary-button w-80"
-      routerLink="/login">
-    </app-button>
+    <p class="home-description">
+      Meet Mates est une application qui permet de participer à des activités
+      en tout genre, rencontrer de nouvelles personnes et partager des moments
+      de convivialité.
+    </p>
 
-    <app-button 
-      label="I N S C R I P T I O N"
-      class="primary-button w-80"
-      routerLink="/register">
-    </app-button>
+    <div class="home-actions">
 
-    @if (isAdmin()) {
       <app-button
-        label="ADMIN "
-        class="primary-button"
-        routerLink="/admin/dashboard">
-      </app-button>
-    }
+         label="CONNEXION" 
+         routerLink="/login" 
+         [fullWidth]="true" 
+       />
+
+      <app-button 
+        label="INSCRIPTION" 
+        routerLink="/register" 
+        [fullWidth]="true" 
+      />
+
+      @if (isAdmin()) {
+      <app-button 
+        label="ADMIN"
+        routerLink="/admin/dashboard" 
+        [fullWidth]="true" 
+       />
+       
+      }
+
+    </div>
 
   </div>
 
-</div>
+</section>

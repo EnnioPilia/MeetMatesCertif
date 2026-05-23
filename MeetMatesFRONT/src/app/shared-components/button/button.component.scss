@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.app-button {
+  width: 100%;
+  min-height: 58px;
+  padding: 0 24px;
+
+  border: none;
+  border-radius: var(--radius-sm);
+
+  background: var(--color-white);
+  color: var(--color-black);
+
+  font-family: var(--font-main);
+  font-size: 18px;
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+
+  border-bottom: 1px solid var(--color-black);
+
+  box-shadow: var(--shadow-button);
+
+  transition:
+    transform var(--transition-bounce),
+    opacity var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.app-button:hover {
+  transform: scale(1.1);
+}
+
+.app-button:active {
+  transform: scale(0.8) translateY(3px);
+  box-shadow: var(--shadow-button-active);
+}
+
+.app-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.full-width {
+  max-width: 100%;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+@media (min-width: 1024px) {
+  .app-button {
+    min-height: 72px;
+    padding: 0 36px;
+
+    font-size: clamp(20px, 1.4vw, 30px);
+  }
+}
